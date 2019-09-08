@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Reunited: Bringing Families Back Together</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="/static/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Reunited</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="row" id="toprow">
+
+    <div class="col-md-12">
+      <h3>Are you a family member who has been separated from their child?</h3>
+      <p>Please upload a recent image of your child and complete the form below:</p>
+        <p>Please upload the picture first!</p>
+    </div>
+
+  <div class="row">
+
+            <div class="col-md-4" style="position: relative; left: 25px;">
+                    <form action="/upload_fileF" method="post" enctype=multipart/form-data>
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+            </div>
+
+
+    <div class="col-md-8" style="position: relative; top: 16px; left: 250px;">
+
+
+      <form action="/submitInf" method="POST">
+        <div class="group">
+          <input type="text" required name="name">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Name</label>
+        </div>
+
+        <div class="group">
+          <input type="text" required name="age">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Age</label>
+        </div>
+
+        <div class="group">
+          <input type="text" required name="gender">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Gender</label>
+        </div>
+
+        <div class="group">
+          <input type="text" required name="location">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Last Known Location</label>
+        </div>
+
+        <div class="group">
+          <input type="text" required name="contact">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Phone Number</label>
+        </div>
+
+          <button class="btn waves-effect waves-light" type="submit" value="Submit">Submit</button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+</div>
+    </div>
+
+</body>
+</html>
