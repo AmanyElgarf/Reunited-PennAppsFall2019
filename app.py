@@ -82,13 +82,9 @@ def submitInf():
         cnx.commit()
         cnx.close()
         image = "/imagesC/" + result
-        print("res")
-        print(result)
-        print(image)
+     
 
-        im = "\amany\amany.png"
-
-        return render_template('oneResult.html', img=im,  name=namee, age=agee, gender=genderr, location=locationn, phone=phonee )
+        return render_template('oneResult.html', img=image,  name=namee, age=agee, gender=genderr, location=locationn, phone=phonee )
     return "Try Again"
 
 
@@ -137,12 +133,8 @@ def submitInfC():
         cnx.commit()
         cnx.close()
         image = "/imagesP/" + result
-        print("res")
-        print(result)
-        print(image)
-        im = "\kamany\kamany.png"
-
-        return render_template('oneResult.html', img=im, name=namee, age=agee, gender=genderr, location=locationn, phone=phonee )
+       
+        return render_template('oneResult.html', img=image, name=namee, age=agee, gender=genderr, location=locationn, phone=phonee )
     return "Try Again"
 
 
